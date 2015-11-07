@@ -8,6 +8,8 @@ import javax.faces.bean.RequestScoped;
 public class EditorBean {
 
     private String comentarios;
+    
+    private Integer puntuación;
 
     public String getComentarios() {
         return comentarios;
@@ -17,6 +19,14 @@ public class EditorBean {
         this.comentarios = comentarios;
     }
 
+    public Integer getPuntuación() {
+        return puntuación;
+    }
+
+    public void setPuntuación(Integer puntuación) {
+        this.puntuación = puntuación;
+    }
+    
     public String grabar() {
         System.out.println("grabando: " + comentarios);
         return "test";
