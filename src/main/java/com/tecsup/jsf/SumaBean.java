@@ -11,6 +11,7 @@ public class SumaBean {
     public double opeB;
     public String operacion;
     public double total;
+    public String yep;
 
     public String calcular() {
         if ("sum".equals(operacion)) {
