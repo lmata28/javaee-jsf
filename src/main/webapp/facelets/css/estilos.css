@@ -1,0 +1,39 @@
+*{
+    font-family: sans-serif; font-size: 11px;
+}
+
+body{
+    background: #eee9ee;
+}
+
+.container{
+    width: 800px;
+    margin: 0 auto;
+}
+
+.header-panel{
+    background: #555;
+    color:aqua;
+    height: 90px;
+}
+
+
+.menu-panel{
+    background: aliceblue;
+    height: 60px;
+}
+
+.body-panel{
+    padding-top: 10px;
+    height:430px;
+    vertical-align: top; 
+    background:white;
+}
+
+.footer-panel{
+    bottom: 10px;
+    height: 60px;
+    background: #555;
+    color: white;
+}
+

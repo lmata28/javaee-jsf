@@ -1,0 +1,30 @@
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core" 
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <head>
+        <meta content="Tienda Virtual" />
+        <title>Tienda Virtual</title>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="header-panel">
+                <ui:include src="../include/header.xhtml" />
+            </div>
+
+            <div class="menu-panel">
+                <ui:include src="../include/menu.xhtml" />
+            </div>
+
+            <div class="body-panel">
+                <ui:insert name="body" />
+            </div>
+
+            <div class="footer-panel">
+                <ui:include src="../include/footer.xhtml" />
+            </div>
+        </div>
+    </body>
+</html>
