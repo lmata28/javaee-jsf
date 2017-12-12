@@ -1,0 +1,62 @@
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:p="http://primefaces.org/ui" 
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <h:head>Registro de evento</h:head>
+    <br/>
+    <h:body>
+        <h:form>
+            Codigo Empleado: 
+            <h:inputText id="empleado" value="#{registroEventBean.empleado}" /><br /> 
+
+            Horario Disponible:
+            <h:selectManyCheckbox value="#{registroEventBean.horario}">
+                <f:selectItem itemValue="7" itemLabel="7:00 am" />
+                <f:selectItem itemValue="9" itemLabel="9:00 am" />
+                <f:selectItem itemValue="11" itemLabel="11:00 am" />
+            </h:selectManyCheckbox> <br/>
+
+            Transporte:
+            <h:selectOneRadio id="sexo" value="#{registroEventBean.transporte}"> 
+                <f:selectItem itemValue="bus" itemLabel="Bus" />
+                <f:selectItem itemValue="auto" itemLabel="Auto Particular" />
+            </h:selectOneRadio><br/> 
+
+
+            <h:commandButton value="Registrar" actionListener="#{registroEventBean.registrar}"/> 
+
+        </h:form>
+
+        <hr/>
+        <c:if test="#{registroEventBean.empleado != null}">
+            <h4>Los datos ingresados son:</h4> 
+
+            <ul>
+                <li>#{registroEventBean.empleado}</li>
+
+
+                <c:if test="#{registroEventBean.transporte == 'bus'}">
+                    <li>Bus</li> </c:if>
+                <c:if test="#{registroEventBean.transporte == 'auto'}">
+                    <li>Auto Particular</li>
+                </c:if>
+
+                <ul>
+                    <c:forEach items="#{registroEventBean.horario}" var="var">
+                        <c:if test="#{var == '7'}">
+                                <li>7:00 am </li> 
+                        </c:if>
+                        <c:if test="#{var == '9'}">
+                                <li>9:00 am </li> 
+                        </c:if>
+                        <c:if test="#{var == '11'}">
+                                <li>11:00 am </li> 
+                        </c:if>
+                    </c:forEach>
+                </ul> 
+            </ul>
+        </c:if>
+    </h:body>
+</html>

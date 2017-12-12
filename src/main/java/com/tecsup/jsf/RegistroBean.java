@@ -24,17 +24,6 @@ public class RegistroBean {
         this.sisop = sisop;
     }
 
-    public void registrar() {
-        System.out.println("Sexo: " + sexo);
-        System.out.println("Total Sistemas: " + sisop.length);
-
-        if (clave.equals(clave2)) {
-            claveMensaje = "Las claves sí coinciden";
-        } else {
-            claveMensaje = "Las claves no coinciden";
-        }
-    }
-
     public String getNombres() {
         return nombres;
     }
@@ -89,6 +78,17 @@ public class RegistroBean {
 
     public void setClaveMensaje(String claveMensaje) {
         this.claveMensaje = claveMensaje;
+    }
+
+    public void registrar() {
+        System.out.println("Sexo: " + sexo);
+        System.out.println("Total Sistemas: " + sisop.length);
+
+        if (clave.equals(clave2)) {
+            claveMensaje = "Las claves sí coinciden";
+        } else {
+            claveMensaje = "Las claves no coinciden";
+        }
     }
 
 }
